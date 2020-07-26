@@ -22,7 +22,7 @@
 }
 
 html {
-  cursor: auto !important;
+	cursor: auto !important;
 }
 
 body {
@@ -97,6 +97,23 @@ canvas{
   margin-bottom: .5rem;
 }
 
+.hero__username {
+  margin-left: 0.3rem;
+  font-family: 'Cutive Mono', monospace;
+  color: var(--color-secondary);
+  font-weight: 100;
+  text-shadow: 1px 1px 1rem var(--color-background);
+  transition: .4s;
+}
+
+.hero__username--active {
+  color: var(--color-primary-light);
+}
+
+.hero__username--active::before {
+  content: '/'; 
+}
+
 .hero__title {
   color: var(--color-primary-light);
   font-size: 3.2rem;
@@ -118,6 +135,10 @@ canvas{
 
 .hero__title:hover + .hero__subtitle {
   color: var(--color-secondary);
+}
+
+.hero__title:hover ~ .hero__username {
+  color: var(--color-primary);
 }
 
 .hero__title::before,
@@ -159,6 +180,7 @@ canvas{
   letter-spacing: 0.5rem;
   font-weight: 300;
   text-shadow: 1px 1px 1rem var(--color-background);
+  transition: color .4s;
 }
 
 .hero__location {

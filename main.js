@@ -127,6 +127,16 @@ clipboard.on('success', function(e) {
     e.clearSelection();
 });
 
+function addUserNameActiveStyle(){
+  const username = document.querySelector('.hero__username');
+  username.classList.add('hero__username--active');
+}
+
+function removeUserNameActiveStyle(){
+  const username = document.querySelector('.hero__username');
+  username.classList.remove('hero__username--active');
+}
+
 // init_pointer({
 //   pointerColor: "white",
 //   ringSize: 8,
