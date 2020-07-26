@@ -137,6 +137,8 @@ function removeUserNameActiveStyle(){
   username.classList.remove('hero__username--active');
 }
 
+var rellax = new Rellax('.parallax');
+
 // init_pointer({
 //   pointerColor: "white",
 //   ringSize: 8,

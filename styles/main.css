@@ -28,6 +28,7 @@ html {
 body {
   font-family: 'Cutive Mono', monospace;
   font-size: 16px;
+  background-color: var(--color-background);
 }
 
 #pointer-dot {
@@ -296,7 +297,7 @@ canvas{
 }
 
 .scroll__line {
-  width: 3rem;
+  width: 2.5rem;
   height: 1px;
   bottom: 3rem;
   position: absolute;
@@ -316,14 +317,14 @@ canvas{
 
 .scroll__line::after {
 	background: var(--color-primary-light);
-	animation: moveDown 3.5s infinite;
+	animation: moveDown 3s infinite;
 }
 
 @keyframes moveDown {
 	0% {
 		transform: translateX(-200%);
 	}
-	80% {
+	60% {
 		transform: translateX(100%);
 	}
 	100% {
