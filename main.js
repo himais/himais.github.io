@@ -110,6 +110,22 @@ const configs = {
 };
 
 particlesJS("particles-js", configs);
+var clipboard = new ClipboardJS('#contact-button');
+
+clipboard.on('success', function(e) {
+    const button = document.querySelector('.hero__contact-button');
+    const message = document.querySelector('.hero__contact-message');
+
+    button.classList.add('hero__contact-button--active');
+    message.classList.add('hero__contact-message--active');
+
+    setTimeout(function() {
+      button.classList.remove('hero__contact-button--active');
+      message.classList.remove('hero__contact-message--active');
+    }, 2000);
+
+    e.clearSelection();
+});
 
 // init_pointer({
 //   pointerColor: "white",

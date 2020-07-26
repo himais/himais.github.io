@@ -168,25 +168,30 @@ canvas{
   text-shadow: 1px 1px 1rem var(--color-background);
 }
 
+.hero__contact {
+  margin-left: 0.3rem;
+  margin-top: 3rem;
+}
+
 .hero__contact-button {
+  display: inline-block;
 	outline: none;
 	text-decoration: none;
-	position: relative;
+  position: relative;
+  z-index: 1;
   display: inline-block;
   color: var(--color-primary-light);
   text-transform: uppercase;
   text-shadow: 1px 1px 1rem var(--color-background);
   font-size: 0.7rem;
   letter-spacing: 0.7rem;
-  margin-left: 0.3rem;
-  margin-top: 3rem;
 	overflow: hidden;
   line-height: 0.75;
   font-weight: bold;
   font-weight: 400;
 }
 
-.hero__contact-button:hover {
+.hero__contact-button:hover, .hero__contact-button--active {
 	color: var(--color-primary-dark);
 }
 
@@ -217,12 +222,29 @@ canvas{
 	color: var(--color-primary-light);
 	white-space: nowrap;
 	width: 0%;
-	transition: width 0.4s;
+  transition: width 0.4s;
 }
 
 .hero__contact-button:hover::before {
   width: 100%;
   color: var(--color-primary-dark);
+}
+
+.hero__contact-message {
+  display: block;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: opacity .2s, transform .3s;
+  pointer-events: none;
+  color: var(--color-primary-light);
+  font-size: 0.9rem;
+  font-weight: 200;
+  font-family: 'Cutive Mono', monospace;
+}
+
+.hero__contact-message--active {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .scroll{
