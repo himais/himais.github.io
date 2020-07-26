@@ -4,12 +4,15 @@
 /* --- Variables --- */
 :root {
   --color-background: #222831;
+  --color-base-gradient: #1c2128;
 
   --color-primary: #66bfbf;
   --color-primary-light: #eaf6f6;
   --color-primary-dark: #00adb5;
 
   --color-secondary: #f76b8a;
+
+  --gradient-background: linear-gradient(180deg, rgba(28,33,40,1) 25%, rgba(34,40,49,1) 64%);
 }
 
 * {
@@ -71,7 +74,8 @@ canvas{
   /* position: absolute; */
   width: 100%;
   height: 100vh;
-  background-color: var(--color-background);
+  background: var(--color-base-gradient);
+  background: var(--gradient-background);
 }
 
 /* --- header --- */
@@ -268,7 +272,7 @@ canvas{
 
 .scroll__line::after {
 	background: var(--color-primary-light);
-	animation: moveDown 4s infinite;
+	animation: moveDown 3.5s infinite;
 }
 
 @keyframes moveDown {
