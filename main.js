@@ -111,6 +111,20 @@ const configs = {
 
 particlesJS("particles-js", configs);
 
+new Pageable("#container", {
+  onScroll: function(data) {
+    const x = document.getElementById("hero");
+    if(data.index) {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+}, 
+});
+
+// const scenebg1 = new Parallax(document.querySelector('.scene-bg-1'));
+// const scenebg2 = new Parallax(document.querySelector('.scene-bg-2'));
+
 // init_pointer({
 //   pointerColor: "white",
 //   ringSize: 8,
