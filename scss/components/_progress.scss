@@ -1,15 +1,13 @@
-.linear-progress {
+.progress {
   position: fixed;
   width: 100%;
   background: gray;
 
-  & {
-    .bar {
-      height: 10px;
-      width: 0;
-      background: red;
-      transition: width .5s;
-    }
+  &__bar {
+    height: 10px;
+    width: 0;
+    background: red;
+    transition: width .5s;
   }
 }
 

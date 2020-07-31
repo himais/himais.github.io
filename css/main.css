@@ -24,13 +24,13 @@ body {
   display: block !important;
 }
 
-.linear-progress {
+.progress {
   position: fixed;
   width: 100%;
   background: gray;
 }
 
-.linear-progress .bar {
+.progress__bar {
   height: 10px;
   width: 0;
   background: red;
