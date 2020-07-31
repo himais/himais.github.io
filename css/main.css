@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700;900&display=swap");
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Cutive Mono", monospace;
+  font-size: 16px;
+  background-color: #222831;
+}
+
+#container {
+  display: block !important;
+}
+
+.linear-progress {
+  position: fixed;
+  width: 100%;
+  background: gray;
+}
+
+.linear-progress .bar {
+  height: 10px;
+  width: 0;
+  background: red;
+  -webkit-transition: width .5s;
+  transition: width .5s;
+}
+
+/* Intro background */
+#particles {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #1c2128;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #1c2128), color-stop(64%, #222831));
+  background: linear-gradient(180deg, #1c2128 25%, #222831 64%);
+}
+
+.hero {
+  position: relative;
+}
+
+.hero__content {
+  position: absolute;
+  top: 40%;
+  left: 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+}
+
+.hero__username {
+  margin-left: 0.3rem;
+  font-family: "Cutive Mono", monospace;
+  color: #f76b8a;
+  font-weight: 100;
+  text-shadow: 1px 1px 1rem #222831;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.hero__username--active {
+  color: --color-primary-light;
+}
+
+.hero__username--active {
+  color: --color-primary-light;
+}
+
+.hero__title {
+  position: relative;
+  display: inline-block;
+  color: #eaf6f6;
+  font-size: 3.2rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1rem #222831;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #eaf6f6), color-stop(50%, #66bfbf), to(#00adb5));
+  background: linear-gradient(to right, #eaf6f6 50%, #66bfbf 50%, #00adb5);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.hero__title::before, .hero__title::after {
+  position: absolute;
+  -webkit-text-fill-color: #eaf6f6;
+  font-weight: 200;
+  opacity: 0;
+}
+
+.hero__title::before {
+  content: '{';
+  left: 1rem;
+  -webkit-transition: opacity 0.2s, left 0.3s;
+  transition: opacity 0.2s, left 0.3s;
+}
+
+.hero__title::after {
+  content: '}';
+  right: 1rem;
+  -webkit-transition: opacity 0.2s, right 0.3s;
+  transition: opacity 0.2s, right 0.3s;
+}
+
+.hero__title:hover {
+  background-position: -100%;
+}
+
+.hero__title:hover + .hero__subtitle {
+  color: #f76b8a;
+}
+
+.hero__title:hover::before, .hero__title:hover::after {
+  opacity: 1;
+}
+
+.hero__title:hover::before {
+  left: -2rem;
+}
+
+.hero__title:hover::after {
+  right: -2rem;
+}
+
+.hero__subtitle {
+  margin-left: 0.2rem;
+  color: #66bfbf;
+  letter-spacing: 0.5rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 1rem #222831;
+  -webkit-transition: color .4s;
+  transition: color .4s;
+}
+
+.hero__location {
+  margin-top: 1rem;
+  color: #eaf6f6;
+  font-weight: 300;
+  text-shadow: 1px 1px 1rem #222831;
+}
+
+.hero__contact {
+  margin-left: 0.3rem;
+  margin-top: 3rem;
+}
+
+.hero__contact-button {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  outline: none;
+  overflow: hidden;
+  color: #eaf6f6;
+  font-size: 0.7rem;
+  font-weight: bold;
+  font-weight: 400;
+  letter-spacing: 0.7rem;
+  line-height: 0.75;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1rem #222831;
+}
+
+.hero__contact-button::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  height: 1rem;
+  width: 100%;
+  top: 50%;
+  right: 0;
+  margin-top: -0.5rem;
+  background: #eaf6f6;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+          transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.hero__contact-button::before {
+  content: attr(data-letters);
+  position: absolute;
+  z-index: 2;
+  overflow: hidden;
+  color: #eaf6f6;
+  white-space: nowrap;
+  width: 0%;
+  -webkit-transition: width 0.4s;
+  transition: width 0.4s;
+}
+
+.hero__contact-button:hover, .hero__contact-button--active {
+  color: #00adb5;
+}
+
+.hero__contact-button:hover::after, .hero__contact-button--active::after {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.hero__contact-button:hover::before, .hero__contact-button--active::before {
+  width: 100%;
+  color: #00adb5;
+}
+
+.hero__contact-message {
+  display: block;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 0;
+  -webkit-transition: opacity .2s, -webkit-transform .3s;
+  transition: opacity .2s, -webkit-transform .3s;
+  transition: opacity .2s, transform .3s;
+  transition: opacity .2s, transform .3s, -webkit-transform .3s;
+  pointer-events: none;
+  color: #eaf6f6;
+  font-size: 0.9rem;
+  font-weight: 200;
+  font-family: "Cutive Mono", monospace;
+  margin-top: 0.2rem;
+}
+
+.hero__contact-message--active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+/*# sourceMappingURL=main.css.map */

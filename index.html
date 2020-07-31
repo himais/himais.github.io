@@ -13,10 +13,12 @@
 
   <link rel="shortcut icon" type="image/png" href="./images/favicon.ico" />
 
+  <!-- Third-party styles -->
   <!-- <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.11/css/unicons.css"> -->
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/pageable@latest/dist/pageable.min.css" />
 
-  <link rel="stylesheet" type="text/css" href="styles/main.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
 
   <title>oie</title>
 </head>
@@ -28,7 +30,29 @@
 
   <div id="container">
     <section data-anchor="Page 1">
-      1
+      <div class="hero parallax" id="main-section" data-rellax-speed="7">
+        <div class="hero__content">
+          <div class="hero_presentation">
+            <h4 class="hero__username">@himais</h4>
+            <h1 class="hero__title" onmouseover="addUserNameActiveStyle()" onmouseout="removeUserNameActiveStyle()">
+              Maíra Tabata
+            </h1>
+            <h3 class="hero__subtitle">Front-end developer </h3>
+            <h5 class="hero__location"><i class="uil uil-location-point"></i> São Paulo, Brazil</h5>
+          </div>
+
+          <div class="hero__contact">
+            <a id="contact-button" class="hero__contact-button" href="#" data-letters="contact me"
+              data-clipboard-text="mairatabata@outlook.com">contact me</a>
+            <span class="hero__contact-message">• my email has been copied to your clipboard! •</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll">
+        <div class="scroll__line"></div>
+        <div class="scroll__label">scroll</div>
+      </div>
     </section>
     <section data-anchor="Page 2">
       2
@@ -41,13 +65,13 @@
     </section>
   </div>
 
+  <!-- Third-party libraries -->
   <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
 
+  <!-- Custom js -->
   <script type="module" src="./script/index.js"></script>
-  <!-- <script type="module">
-    import {sayHi} from './main.js';
-  
-    console.log(sayHi('John'));
-  </script> -->
 </body>
+
 </html>

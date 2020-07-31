@@ -1,6 +1,6 @@
 import { updateProgressBar } from './progress.js';
 
-// --- Init third-party libraries
+// Init third-party libraries
 new Pageable("#container", {
   childSelector: "[data-anchor]",
   anchors: ['Page 1 ', 'Page 2', 'Page 3', 'Page 4'],
@@ -17,3 +17,7 @@ new Pageable("#container", {
   },
   onScroll: updateProgressBar,
 });
+
+particlesJS.load('main-section', 'config/particles.json');
+
+new Rellax('.parallax');
