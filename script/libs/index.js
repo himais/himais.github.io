@@ -3,7 +3,7 @@ import { updateProgressBar } from '../components/progress.js';
 // Init third-party libraries
 const initLibraries = () => {
   // Pagination and menu
-  new Pageable("#container", {
+  new Pageable("#main", {
     childSelector: "[data-anchor]",
     anchors: ['Page 1 ', 'Page 2', 'Page 3', 'Page 4'],
     pips: true,
