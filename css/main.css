@@ -25,6 +25,7 @@ body {
 }
 
 .progress {
+  display: none;
   position: fixed;
   width: 100%;
   background: gray;
@@ -250,27 +251,33 @@ body {
   opacity: 1;
 }
 
-.scroll {
-  width: 100%;
+.hero__footer {
+  cursor: pointer;
   position: absolute;
   bottom: 5vh;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.scroll__label {
+.hero .scroll {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero .scroll__label {
   color: #eaf6f6;
   text-shadow: 1px 1px 1rem #222831;
   text-transform: uppercase;
@@ -282,11 +289,11 @@ body {
   transition: color 0.3s;
 }
 
-.scroll__label:hover {
+.hero .scroll__label:hover {
   color: #f76b8a;
 }
 
-.scroll__line {
+.hero .scroll__line {
   width: 2.5rem;
   height: 1px;
   bottom: 3rem;
@@ -296,7 +303,7 @@ body {
           transform: rotate(90deg);
 }
 
-.scroll__line::before, .scroll__line::after {
+.hero .scroll__line::before, .hero .scroll__line::after {
   content: '';
   position: absolute;
   top: 0;
@@ -305,7 +312,7 @@ body {
   bottom: 0;
 }
 
-.scroll__line::after {
+.hero .scroll__line::after {
   background: #eaf6f6;
   -webkit-animation: moveDown 3s infinite;
           animation: moveDown 3s infinite;

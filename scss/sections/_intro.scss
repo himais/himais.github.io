@@ -188,57 +188,63 @@
       opacity: 1;
     }
   }
-}
 
-.scroll {
-  width: 100%;
-  position: absolute;
-  bottom: 5vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-
-  &__label {
-    color: $color-primary-light;
-    text-shadow: 1px 1px 1rem $color-background;
-    text-transform: uppercase;
-    font-size: 0.6rem;
-    letter-spacing: 0.2rem;
-    font-weight: 300;
-    font-family: $font-title;
-    transition: color 0.3s;
-
-    &:hover {
-      color: $color-secondary;
-    }
-  }
-
-  &__line {
-    width: 2.5rem;
-    height: 1px;
-    bottom: 3rem;
+  &__footer {
+    cursor: pointer;
     position: absolute;
-    overflow: hidden;
-    transform: rotate(90deg);
+    bottom: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+  .scroll {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &__label {
+      color: $color-primary-light;
+      text-shadow: 1px 1px 1rem $color-background;
+      text-transform: uppercase;
+      font-size: 0.6rem;
+      letter-spacing: 0.2rem;
+      font-weight: 300;
+      font-family: $font-title;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $color-secondary;
+      }
     }
 
-    &::after {
-      background: $color-primary-light;
-      animation: moveDown 3s infinite;
+    &__line {
+      width: 2.5rem;
+      height: 1px;
+      bottom: 3rem;
+      position: absolute;
+      overflow: hidden;
+      transform: rotate(90deg);
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      &::after {
+        background: $color-primary-light;
+        animation: moveDown 3s infinite;
+      }
     }
   }
 }
+
 
 @keyframes moveDown {
 	0% {

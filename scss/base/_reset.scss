@@ -17,7 +17,7 @@ body {
   background-color: $color-background;
 }
 
-// Pageable.js
+// Pageable.js: fix unexpected horizontal scroll
 #container {
   display: block !important;
 }
