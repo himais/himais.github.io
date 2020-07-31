@@ -13,76 +13,41 @@
 
   <link rel="shortcut icon" type="image/png" href="./images/favicon.ico" />
 
-  <!-- <link href="https://seattleowl.com/pointer.js/pointer.css" rel="stylesheet"> -->
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.11/css/unicons.css">
+  <!-- <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.11/css/unicons.css"> -->
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/pageable@latest/dist/pageable.min.css" />
+
   <link rel="stylesheet" type="text/css" href="styles/main.css" />
 
-  <title>yayaya</title>
+  <title>oie</title>
 </head>
 
 <body>
-  <main>
-    <!-- <div class="menu-wrapper">
-        <div class="menu">
-          a
-          a
-          a
-        </div>
-      </div> -->
-    <section id="particles-js" class="parallax container-bg" data-rellax-speed="4">
-      <div class="hero parallax" data-rellax-speed="7">
-        <!-- <div class="hero__logo"></div> -->
-        <div>
-          <h4 class="hero__username">@himais</h4>
-          <h1 class="hero__title" onmouseover="addUserNameActiveStyle()" onmouseout="removeUserNameActiveStyle()">Maíra
-            Tabata</h1>
-          <h3 class="hero__subtitle">Front-end developer </h3>
-          <h5 class="hero__location"><i class="uil uil-location-point"></i> São Paulo, Brazil</h5>
-        </div>
+  <div class="linear-progress">
+    <div class="bar"></div>
+  </div>
 
-        <div class="hero__contact">
-          <a id="contact-button" class="hero__contact-button" href="#" data-letters="contact me"
-            data-clipboard-text="mairatabata@outlook.com">contact me</a>
-          <span class="hero__contact-message">• my email has been copied to your clipboard! •</span>
-        </div>
-      </div>
-
-      <div class="scroll">
-        <div class="scroll__line"></div>
-        <div class="scroll__label">scroll</div>
-      </div>
+  <div id="container">
+    <section data-anchor="Page 1">
+      1
     </section>
-
-    <section class="parallax" data-rellax-speed="4">
-      <div class="container">
-        <div class="container__sidebar container-bg">
-          <span class="container__title" data-background-text="• 01 •">
-            Educação
-          </span>
-        </div>
-        <div class="container__content">
-          fdgfgfdgfg
-        </div>
-      </div>
+    <section data-anchor="Page 2">
+      2
     </section>
-  </main>
-  </main>
+    <section data-anchor="Page 3">
+      3
+    </section>
+    <section data-anchor="Page 4">
+      4
+    </section>
+  </div>
 
+  <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
 
-  <!-- <div id="cursor"></div> -->
-
-  <!-- particles.js container -->
-  <!-- stats - count particles -->
-  <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
-  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
-  <!-- <script src="https://seattleowl.com/pointer.js/pointer.js"></script> -->
-  <script type="text/javascript" src="main.js"></script>
-
-  <script data-who="💎 Made with naker.io 💎" src="https://d23jutsnau9x47.cloudfront.net/back/v1.0.9/viewer.js" data-option="{|environment|:{|gradient|:|radial|,|sensitivity|:0.8,|colorStart|:[34,40,49,1],|colorEnd|:[28,33,40,1]},|particle|:{|life|:5,|power|:0.5,|texture|:|https://res.cloudinary.com/naker-io/image/upload/v1596066594/n8vyg24ykybbangdo5fz.png|,|number|:150,|colorStart|:[116,129,92,0.13],|colorEnd|:[255,255,255,0.52],|sizeStart|:0.13,|sizeEnd|:0.26,|direction1|:{|x|:0,|y|:0,|z|:0},|direction2|:{|x|:0,|y|:0,|z|:0}},|waterMark|:false}" data-container=".container-bg"></script>
+  <script type="module" src="./script/index.js"></script>
+  <!-- <script type="module">
+    import {sayHi} from './main.js';
+  
+    console.log(sayHi('John'));
+  </script> -->
 </body>
-
-
-
 </html>
