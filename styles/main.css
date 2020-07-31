@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700;900&display=swap');
 
 /* --- Variables --- */
 :root {
@@ -22,7 +22,8 @@
 }
 
 html {
-	cursor: auto !important;
+  cursor: auto !important;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -60,10 +61,7 @@ section {
   width: 100%;
   height: 100vh;
   background-color: var(--color-background);
-}
-
-.container {
-  /* padding: 10vh 20vw; */
+  /* outline: solid 1px red; */
 }
 
 canvas{
@@ -263,12 +261,15 @@ canvas{
   font-size: 0.9rem;
   font-weight: 200;
   font-family: 'Cutive Mono', monospace;
+  margin-top: 0.2rem;
 }
 
 .hero__contact-message--active {
   transform: translateY(0);
   opacity: 1;
 }
+
+/* -------- */
 
 .scroll{
   width: 100%;
@@ -332,6 +333,8 @@ canvas{
 	}
 }
 
+/* -------- */
+
 .menu-wrapper {
   height: 100%;
   position: fixed;
@@ -344,4 +347,74 @@ canvas{
   background: red;
   width: 20px;
   height: 100px;
+}
+
+/* -------- */
+
+.container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100%;
+}
+
+.container__sidebar{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  padding-right: 2rem;
+}
+
+.container__sidebar::before {
+  content: '';
+  width: 1px;
+  height: 100%;
+  background: #393e46;
+  position: absolute;
+  opacity: 0.8;
+  left: 5vw;
+}
+
+.container__sidebar::after {
+  content: '';
+  width: 4px;
+  height: 5rem;
+  background: #393e46;
+  position: absolute;
+  left: calc(5vw - 2px);
+}
+
+.container__title {
+  font-size: 3rem;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--color-primary-light);
+  text-transform: uppercase;
+  font-weight: 100;
+  position: relative;
+}
+
+.container__title::before {
+  content: attr(data-background-text);
+  color: var(--color-primary-light);
+  position: absolute;
+  z-index: -1;
+  font-weight: 700;
+  transform: translate(-55%, -55%);
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  opacity: 0.05;
+}
+
+.container__title::after {
+  content: '';
+  width: 4rem;
+  height: 0.15rem;
+  background: var(--color-primary);
+  position: absolute;
+  bottom: -0.5rem;
+  right: 0;
+}
+
+.container__content {
+  background: var(--color-primary-light);
 }
