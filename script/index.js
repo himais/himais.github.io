@@ -1,7 +1,9 @@
-import { init } from './init.js';
+import initLibraries from './libs/index.js';
+import initSections from './sections/index.js';
 
 const app = async () => {
-  init();
+  initLibraries();
+  initSections();
 };
 
 document.addEventListener('DOMContentLoaded', app);

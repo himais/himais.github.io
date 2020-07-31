@@ -29,11 +29,11 @@
     transition: .4s;
 
     &--active {
-      color: --color-primary-light;
+      color: $color-primary-light;
     }
 
-    &--active {
-      color: --color-primary-light;
+    &--active::before {
+      content: '/'; 
     }
   }
 

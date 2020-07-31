@@ -1,7 +1,7 @@
-import { updateProgressBar } from './progress.js';
+import { updateProgressBar } from '../components/progress.js';
 
 // Init third-party libraries
-export const init = () => {
+const initLibraries = () => {
   // Pagination and menu
   new Pageable("#container", {
     childSelector: "[data-anchor]",
@@ -25,5 +25,6 @@ export const init = () => {
 
   // Particle effect on hero section
   particlesJS.load('particles', 'config/particles.json');
+};
 
-}
+export default initLibraries;

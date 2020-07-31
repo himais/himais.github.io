@@ -78,11 +78,11 @@ body {
 }
 
 .hero__username--active {
-  color: --color-primary-light;
+  color: #eaf6f6;
 }
 
-.hero__username--active {
-  color: --color-primary-light;
+.hero__username--active::before {
+  content: '/';
 }
 
 .hero__title {
