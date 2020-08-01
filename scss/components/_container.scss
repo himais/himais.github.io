@@ -6,10 +6,10 @@
   // Left
   &__sidebar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     position: relative;
-    padding-right: 2rem;
+    padding-left: 5rem;
 
     // &::before {
     //   content: '';
@@ -50,6 +50,7 @@
       text-transform: uppercase;
       font-size: 4.5rem;
       opacity: 0.05;
+      transition: color .4s;
     }
 
     &::after {
@@ -66,6 +67,10 @@
     &:hover {
       color: $color-primary;
 
+      &::before {
+        color: $color-primary;
+      }
+
       &::after {
         background-color: $color-primary-light;
         width: 100%;
@@ -75,6 +80,8 @@
 
   // Right
   &__content {
-    background: $color-primary-light;
+    padding: 4rem 5rem 3rem 2rem;
+    display: flex;
+    align-items: center;
   }
 }
