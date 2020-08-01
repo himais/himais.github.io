@@ -17,11 +17,21 @@ h6 {
 body {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
-  background-color: #222831;
+}
+
+.bg {
+  width: 100%;
+  background: #222831;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 #main {
   display: block !important;
+  position: absolute;
+  z-index: 1;
 }
 
 .progress {
@@ -127,9 +137,6 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: #1c2128;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #1c2128), color-stop(64%, #222831));
-  background: linear-gradient(180deg, #1c2128 25%, #222831 64%);
 }
 
 .hero {

@@ -14,10 +14,21 @@ h6 {
 body {
   font-family: $font-body;
   font-size: 16px;
-  background-color: $color-background;
+  // background-color: $color-background;
+}
+
+.bg {
+  width: 100%;
+  background: $color-background;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 // Pageable.js: fix unexpected horizontal scroll
 #main {
   display: block !important;
+  position: absolute;
+  z-index: 1;
 }
