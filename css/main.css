@@ -174,7 +174,7 @@ body {
 }
 
 .hero__username--active::before {
-  content: "/";
+  content: '/';
 }
 
 .hero__title {
@@ -202,14 +202,14 @@ body {
 }
 
 .hero__title::before {
-  content: "{";
+  content: '{';
   left: 1rem;
   -webkit-transition: opacity 0.2s, left 0.3s;
   transition: opacity 0.2s, left 0.3s;
 }
 
 .hero__title::after {
-  content: "}";
+  content: '}';
   right: 1rem;
   -webkit-transition: opacity 0.2s, right 0.3s;
   transition: opacity 0.2s, right 0.3s;
@@ -275,7 +275,7 @@ body {
 }
 
 .hero__contact-button::after {
-  content: "";
+  content: '';
   position: absolute;
   z-index: 0;
   height: 1rem;
@@ -382,10 +382,6 @@ body {
   transition: color 0.3s;
 }
 
-.hero .scroll__label:hover {
-  color: #f76b8a;
-}
-
 .hero .scroll__line {
   width: 2.5rem;
   height: 1px;
@@ -397,7 +393,7 @@ body {
 }
 
 .hero .scroll__line::before, .hero .scroll__line::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;

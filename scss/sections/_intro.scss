@@ -33,7 +33,7 @@
     }
 
     &--active::before {
-      content: "/";
+      content: '/';
     }
   }
 
@@ -65,13 +65,13 @@
     }
 
     &::before {
-      content: "{";
+      content: '{';
       left: 1rem;
       transition: opacity 0.2s, left 0.3s;
     }
 
     &::after {
-      content: "}";
+      content: '}';
       right: 1rem;
       transition: opacity 0.2s, right 0.3s;
     }
@@ -137,7 +137,7 @@
     text-shadow: 1px 1px 1rem $color-background;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       z-index: 0;
       height: 1rem;
@@ -220,10 +220,6 @@
       font-weight: 300;
       font-family: $font-title;
       transition: color 0.3s;
-
-      &:hover {
-        color: $color-secondary;
-      }
     }
 
     &__line {
@@ -236,7 +232,7 @@
 
       &::before,
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
