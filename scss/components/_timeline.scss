@@ -15,7 +15,7 @@
     padding: 1rem 1rem 0;
     position: relative;
     opacity: 1;
-    transition: .8s;
+    transition: 0.8s;
 
     &::after {
       content: '';
@@ -29,14 +29,14 @@
       border-radius: 50%;
     }
 
-    &:last-child {  
+    &:last-child {
       padding-bottom: 1.5rem;
     }
 
     .timeline:hover &:not(:hover) {
       & > * {
-        opacity: .6;
-        transition: .8s;
+        opacity: 0.5;
+        transition: 0.8s;
       }
 
       &::after {
@@ -55,7 +55,7 @@
   &__heading {
     color: $color-primary;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   &__description {
@@ -66,9 +66,11 @@
 
   &__date {
     color: $color-gray-light;
+    font-family: $font-title;
     font-weight: 200;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     margin-top: 0.1rem;
+    letter-spacing: 0.02rem;
   }
 
   &__content {
@@ -90,12 +92,15 @@
     }
 
     &__item {
-      font-size: 0.8rem;
-      font-family: $font-title;
+      font-size: 0.81rem;
+      font-family: $font-body;
+      letter-spacing: 0.04rem;
 
       &-date {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         font-weight: 200;
+        font-family: $font-title;
+        color: $color-primary-light;
       }
     }
   }
