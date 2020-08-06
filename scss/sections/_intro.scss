@@ -20,18 +20,20 @@
   // Presentation
   &__username {
     margin-left: 0.3rem;
-    font-family: $font-body;
+    font-family: $font-title;
     color: $color-secondary;
-    font-weight: 100;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
     text-shadow: 1px 1px 1rem $color-background;
-    transition: .4s;
+    text-transform: uppercase;
+    transition: 0.4s;
 
     &--active {
       color: $color-primary-light;
     }
 
     &--active::before {
-      content: '/'; 
+      content: "/";
     }
   }
 
@@ -43,11 +45,16 @@
     font-weight: 200;
     text-transform: uppercase;
     text-shadow: 1px 1px 1rem $color-background;
-    background: linear-gradient(to right, $color-primary-light 50%, $color-primary 50%, $color-primary-dark);
+    background: linear-gradient(
+      to right,
+      $color-primary-light 50%,
+      $color-primary 50%,
+      $color-primary-dark
+    );
     background-size: 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: .3s ease-in-out;
+    transition: 0.3s ease-in-out;
 
     &::before,
     &::after {
@@ -58,13 +65,13 @@
     }
 
     &::before {
-      content: '{';
+      content: "{";
       left: 1rem;
       transition: opacity 0.2s, left 0.3s;
     }
-    
+
     &::after {
-      content: '}';
+      content: "}";
       right: 1rem;
       transition: opacity 0.2s, right 0.3s;
     }
@@ -84,7 +91,7 @@
       &::before {
         left: -2rem;
       }
-      
+
       &::after {
         right: -2rem;
       }
@@ -97,7 +104,7 @@
     letter-spacing: 0.5rem;
     font-weight: 300;
     text-shadow: 1px 1px 1rem $color-background;
-    transition: color .4s;
+    transition: color 0.4s;
   }
 
   &__location {
@@ -130,7 +137,7 @@
     text-shadow: 1px 1px 1rem $color-background;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       z-index: 0;
       height: 1rem;
@@ -154,8 +161,9 @@
       width: 0%;
       transition: width 0.4s;
     }
-    
-    &:hover, &--active {
+
+    &:hover,
+    &--active {
       color: $color-primary-dark;
 
       &::after {
@@ -173,12 +181,13 @@
     display: block;
     transform: translateY(-100%);
     opacity: 0;
-    transition: opacity .2s, transform .3s;
+    transition: opacity 0.2s, transform 0.3s;
     pointer-events: none;
     color: $color-primary-light;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 200;
     font-family: $font-body;
+    letter-spacing: 0.05rem;
     margin-top: 0.2rem;
 
     &--active {
@@ -227,7 +236,7 @@
 
       &::before,
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -243,15 +252,14 @@
   }
 }
 
-
 @keyframes moveDown {
-	0% {
-		transform: translateX(-200%);
-	}
-	60% {
-		transform: translateX(100%);
-	}
-	100% {
-		transform: translateX(100%);
-	}
+  0% {
+    transform: translateX(-200%);
+  }
+  60% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
