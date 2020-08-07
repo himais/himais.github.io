@@ -14,7 +14,29 @@ h6 {
 body {
   font-family: $font-body;
   font-size: 16px;
-  // background-color: $color-background;
+  background-color: $color-background;
+  overflow: hidden;
+}
+
+a {
+  color: $color-primary-light;
+  transition: color 0.2s;
+}
+
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+}
+
+a:hover {
+  color: $color-primary;
+}
+
+a:link,
+a:active {
+  color: $color-primary-dark;
 }
 
 .bg {
@@ -26,9 +48,9 @@ body {
   left: 0;
 }
 
-// Pageable.js: fix unexpected horizontal scroll
 #main {
-  display: block !important;
   position: absolute;
   z-index: 1;
+  width: 100vw;
+  height: 100vh;
 }
