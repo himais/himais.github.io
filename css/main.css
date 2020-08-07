@@ -232,12 +232,16 @@ body {
 
 .hero {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hero__content {
   position: absolute;
-  top: 37%;
-  left: 10vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -246,10 +250,22 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   font-family: "Montserrat", sans-serif;
+  width: 75vw;
+  left: 1rem;
+}
+
+@media (min-width: 576px) {
+  .hero__content {
+    display: block;
+    top: 37%;
+    left: 10vw;
+  }
 }
 
 .hero__username {
-  margin-left: 0.3rem;
+  font-size: 0.6rem;
+  margin-left: 0.2rem;
+  margin-bottom: 0.2rem;
   font-family: "Montserrat", sans-serif;
   color: #f76b8a;
   font-weight: 400;
@@ -268,11 +284,18 @@ body {
   content: '/';
 }
 
+@media (min-width: 576px) {
+  .hero__username {
+    margin-left: 0.3rem;
+    margin-bottom: 0;
+  }
+}
+
 .hero__title {
   position: relative;
   display: inline-block;
   color: #eaf6f6;
-  font-size: 3.2rem;
+  font-size: 2.2rem;
   font-weight: 200;
   text-transform: uppercase;
   text-shadow: 1px 1px 1rem #222831;
@@ -326,14 +349,28 @@ body {
   right: -2rem;
 }
 
+@media (min-width: 576px) {
+  .hero__title {
+    font-size: 3.2rem;
+  }
+}
+
 .hero__subtitle {
   margin-left: 0.2rem;
   color: #66bfbf;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.25rem;
   font-weight: 300;
+  font-size: 1rem;
   text-shadow: 1px 1px 1rem #222831;
   -webkit-transition: color 0.4s;
   transition: color 0.4s;
+}
+
+@media (min-width: 576px) {
+  .hero__subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 0.5rem;
+  }
 }
 
 .hero__description {
@@ -341,6 +378,7 @@ body {
   margin-left: 0.3rem;
   color: #eaf6f6;
   font-weight: 300;
+  font-size: 0.8rem;
   text-shadow: 1px 1px 1rem #222831;
 }
 
@@ -351,6 +389,12 @@ body {
 .hero__description .icon {
   font-size: 1rem;
   vertical-align: bottom;
+}
+
+@media (min-width: 576px) {
+  .hero__description {
+    font-size: 0.8rem;
+  }
 }
 
 .hero__contact {
