@@ -18,27 +18,6 @@ body {
   overflow: hidden;
 }
 
-a {
-  color: $color-primary-light;
-  transition: color 0.2s;
-}
-
-a:hover,
-a:visited,
-a:link,
-a:active {
-  text-decoration: none;
-}
-
-a:hover {
-  color: $color-primary;
-}
-
-a:link,
-a:active {
-  color: $color-primary-dark;
-}
-
 .bg {
   width: 100%;
   background: $color-background;

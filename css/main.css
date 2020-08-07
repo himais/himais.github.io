@@ -21,28 +21,6 @@ body {
   overflow: hidden;
 }
 
-a {
-  color: #eaf6f6;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-}
-
-a:hover,
-a:visited,
-a:link,
-a:active {
-  text-decoration: none;
-}
-
-a:hover {
-  color: #66bfbf;
-}
-
-a:link,
-a:active {
-  color: #00adb5;
-}
-
 .bg {
   width: 100%;
   background: #222831;
@@ -57,6 +35,27 @@ a:active {
   z-index: 1;
   width: 100vw;
   height: 100vh;
+}
+
+.link {
+  color: #eaf6f6;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.link:hover,
+.link:visited,
+.link:link,
+.link:active {
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #66bfbf;
+}
+
+.link:active {
+  color: #00adb5;
 }
 
 .menu {
