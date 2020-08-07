@@ -6,7 +6,7 @@
     content: '';
     position: absolute;
     width: 1px;
-    background-color: $color-gray-light;
+    background-color: $color-gray-dark;
     top: 0;
     bottom: 0;
   }
@@ -16,6 +16,7 @@
     position: relative;
     opacity: 1;
     transition: 0.8s;
+    letter-spacing: 0.02rem;
 
     &::after {
       content: '';
@@ -56,6 +57,7 @@
     color: $color-primary;
     font-weight: 600;
     font-size: 0.95rem;
+    letter-spacing: 0.03rem;
   }
 
   &__description {
@@ -70,7 +72,6 @@
     font-weight: 200;
     font-size: 0.7rem;
     margin-top: 0.1rem;
-    letter-spacing: 0.02rem;
   }
 
   &__content {

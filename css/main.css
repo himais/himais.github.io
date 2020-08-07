@@ -141,7 +141,7 @@ body {
   content: '';
   position: absolute;
   width: 1px;
-  background-color: #eeeeee;
+  background-color: #4d606e;
   top: 0;
   bottom: 0;
 }
@@ -152,6 +152,7 @@ body {
   opacity: 1;
   -webkit-transition: 0.8s;
   transition: 0.8s;
+  letter-spacing: 0.02rem;
 }
 
 .timeline__item::after {
@@ -189,6 +190,7 @@ body {
   color: #66bfbf;
   font-weight: 600;
   font-size: 0.95rem;
+  letter-spacing: 0.03rem;
 }
 
 .timeline__description {
@@ -203,7 +205,6 @@ body {
   font-weight: 200;
   font-size: 0.7rem;
   margin-top: 0.1rem;
-  letter-spacing: 0.02rem;
 }
 
 .timeline__content {
@@ -372,7 +373,7 @@ body {
   font-weight: bold;
   font-weight: 400;
   letter-spacing: 0.7rem;
-  line-height: 0.75;
+  line-height: 1;
   text-decoration: none;
   text-transform: uppercase;
   text-shadow: 1px 1px 1rem #222831;
