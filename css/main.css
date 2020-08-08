@@ -14,6 +14,12 @@ h6 {
           box-sizing: border-box;
 }
 
+a,
+span,
+div {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 body {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
@@ -158,6 +164,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.menu__item:hover, .menu__item:visited, .menu__item:link, .menu__item:active {
+  background: none;
 }
 
 .menu__item:hover {
@@ -469,6 +479,10 @@ body {
   text-shadow: 1px 1px 1rem #222831;
 }
 
+.hero__contact-button:active, .hero__contact-button:hover, .hero__contact-button:link {
+  background: none;
+}
+
 .hero__contact-button::after {
   content: '';
   position: absolute;
@@ -531,11 +545,13 @@ body {
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.05rem;
   margin-top: 0.2rem;
+  background: none;
 }
 
 .hero__contact-message--active {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
+  background: none;
 }
 /*# sourceMappingURL=main.css.map */
