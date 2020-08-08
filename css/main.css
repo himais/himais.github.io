@@ -166,10 +166,6 @@ body {
           align-items: center;
 }
 
-.menu__item:hover, .menu__item:visited, .menu__item:link, .menu__item:active {
-  background: none;
-}
-
 .menu__item:hover {
   color: #66bfbf;
 }
@@ -225,61 +221,6 @@ body {
 
 .menu__item:hover::after {
   opacity: 0.3;
-}
-
-.loader {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #1c2128), color-stop(64%, #222831));
-  background: linear-gradient(180deg, #1c2128 25%, #222831 64%);
-  z-index: 3;
-  top: 0;
-  left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: none;
-}
-
-.loader__logo-container {
-  position: relative;
-}
-
-.loader__logo {
-  width: 2vw;
-  position: absolute;
-  bottom: 0;
-  -webkit-animation: rotate 2s infinite;
-          animation: rotate 2s infinite;
-}
-
-@-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
-}
-
-@keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
 }
 
 /* Intro background */
@@ -479,10 +420,6 @@ body {
   text-shadow: 1px 1px 1rem #222831;
 }
 
-.hero__contact-button:active, .hero__contact-button:hover, .hero__contact-button:link {
-  background: none;
-}
-
 .hero__contact-button::after {
   content: '';
   position: absolute;
@@ -545,13 +482,11 @@ body {
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.05rem;
   margin-top: 0.2rem;
-  background: none;
 }
 
 .hero__contact-message--active {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
-  background: none;
 }
 /*# sourceMappingURL=main.css.map */
