@@ -60,29 +60,45 @@ body {
 
 .menu {
   position: fixed;
-  top: 0;
-  right: 0;
-  height: 100%;
   padding: 10vh 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  bottom: 0;
+  left: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 20vh;
+}
+
+@media (min-width: 576px) {
+  .menu {
+    top: 0;
+    right: 0;
+    bottom: initial;
+    left: initial;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    width: auto;
+  }
 }
 
 .menu::before, .menu::after {
   content: '';
-  width: 1px;
-  height: 10vh;
+  width: 5vw;
+  height: 1px;
   position: absolute;
   background: #eaf6f6;
   opacity: 0.5;
@@ -90,17 +106,43 @@ body {
   transition: 0.3s;
 }
 
+@media (min-width: 576px) {
+  .menu::before, .menu::after {
+    width: 1px;
+    height: 10vh;
+  }
+}
+
 .menu::before {
-  top: 0;
+  left: 0;
+}
+
+@media (min-width: 576px) {
+  .menu::before {
+    top: 0;
+    left: initial;
+  }
 }
 
 .menu::after {
-  bottom: 0;
+  right: 0;
+}
+
+@media (min-width: 576px) {
+  .menu::after {
+    bottom: 0;
+    right: initial;
+  }
 }
 
 .menu:hover::before, .menu:hover::after {
-  height: 8vh;
   background-color: #66bfbf;
+}
+
+@media (min-width: 576px) {
+  .menu:hover::before, .menu:hover::after {
+    height: 8vh;
+  }
 }
 
 .menu__item {
@@ -144,6 +186,13 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   white-space: nowrap;
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .menu__item::before, .menu__item::after {
+    display: block;
+  }
 }
 
 .menu__item::before {
